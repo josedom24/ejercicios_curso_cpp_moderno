@@ -1,0 +1,3 @@
+C++ es un lenguaje de programación de propósito general orientado a objetos.  
+Permite trabajar con bajo nivel y alto nivel en un mismo programa.  
+La gestión automática de recursos mediante RAII es una característica fundamental de C++ moderno.  

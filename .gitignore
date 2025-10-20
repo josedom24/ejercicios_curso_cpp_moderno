@@ -11,6 +11,7 @@ ejemplos/**/*
 !ejemplos/**/*.hpp
 !ejemplos/**/*.txt
 !ejemplos/**/*.md
+!ejemplos/**/*.jpg
 
 
 ejercicios/**/*
