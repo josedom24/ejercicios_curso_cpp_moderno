@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    double total_compra {0.0};
+    auto total_compra {0.0};
     constexpr double descuento {0.15};
 
     std::cout << "Introduce el total de la compra: ";
