@@ -21,3 +21,4 @@ ejercicios/**/*
 !ejercicios/**/*.hpp
 !ejercicios/**/*.txt
 !ejercicios/**/*.md
+!ejercicios/**/*.jpg
