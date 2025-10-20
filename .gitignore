@@ -1,11 +1,22 @@
 # Ignorar configuración local de VS Code
 .vscode/
 
-# Ignorar todos los ejecutables dentro de 'ejemplos/'
-# (archivos sin extensión dentro de subcarpetas de ejemplos)
+## Ignorar todo en ejemplos
 ejemplos/**/*
+# Pero no los directorios (para que Git pueda ver dentro)
+!ejemplos/**/
+# Ni los archivos fuente, encabezados o docs
 !ejemplos/**/*.cpp
 !ejemplos/**/*.h
 !ejemplos/**/*.hpp
 !ejemplos/**/*.txt
 !ejemplos/**/*.md
+
+
+ejercicios/**/*
+!ejercicios/**/
+!ejercicios/**/*.cpp
+!ejercicios/**/*.h
+!ejercicios/**/*.hpp
+!ejercicios/**/*.txt
+!ejercicios/**/*.md
