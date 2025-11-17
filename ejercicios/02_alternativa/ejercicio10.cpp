@@ -23,7 +23,7 @@ int main() {
             case 4: case 6: case 9: case 11:
                 if (dia < 1 || dia > 30) fechaCorrecta = false;
                 break;
-            case 2:
+            case 2: {
                 // Comprobación de año bisiesto
                 bool bisiesto = (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
                 if (bisiesto) {
@@ -32,6 +32,7 @@ int main() {
                     if (dia < 1 || dia > 28) fechaCorrecta = false;
                 }
                 break;
+                }
             default:
                 fechaCorrecta = false;
         }
