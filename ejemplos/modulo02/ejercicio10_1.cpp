@@ -2,15 +2,16 @@
 #include <string>
 
 int main() {
-    std::string nombre {};
     int edad {};
+    std::string nombre {};
 
-    std::cout << "Bienvenido..." << std::endl;
-    std::cout << "Dime tu nombre: ";
-    std::getline(std::cin, nombre);
-
-    std::cout << "Dime la edad de " << nombre << ": ";
+    std::cout << "Introduce tu edad: ";
     std::cin >> edad;
+
+    std::cin.ignore();  // Limpiar búfer
+
+    std::cout << "Introduce tu nombre completo: ";
+    std::getline(std::cin, nombre);
 
     std::cout << nombre << " tiene " << edad << " años." << std::endl;
 
