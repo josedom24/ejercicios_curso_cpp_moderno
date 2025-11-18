@@ -7,22 +7,27 @@ int main() {
     std::ifstream archivo("archivo.txt");
     if (!archivo.is_open()) {
         std::cerr << "Error al abrir archivo\n";
-        return 1; // Salida temprana si no se puede abrir
+        return 1;
     }
 
     int numero{};
-    archivo >> numero; // Intentamos leer un número
+    archivo >> numero; // Intento de lectura
 
+    // Comprobación: ¿falló la lectura por formato o fin de archivo?
     if (archivo.fail()) {
-        std::cerr << "Error al leer el número\n";
-        return 1; // Salida si la lectura falla
+        std::cerr << "Error al leer el número (fail)\n";
+        return 1;
     }
 
-    // Si todo va bien, mostramos el número leído
-    std::cout << "Número leído: " << numero << '\n';
+    // Comprobación opcional: ¿ocurrió un error grave durante la operación?
+    if (archivo.bad()) {
+        std::cerr << "Error grave en el flujo (bad)\n";
+        return 1;
+    }
 
-    // Cierre automático al salir del bloque
+    std::cout << "Número leído: " << numero << '\n';
     std::cout << "Programa finalizado\n";
 
     return 0;
 }
+
